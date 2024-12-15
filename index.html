@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f585464f3b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" alt="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>CSE Student</p>
+            <h1>I'm <span>Samanvitha C</span> <br>From India</h1>
+        </div>
+    </div>
+   </div>
+<!-- <! -------about-----> 
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>Dedicated student aspiring to build a career in web development, with a strong enthusiasm for learning and exploring
+                    various tech fields. Eager to expand my skills, gain hands-on experience, and contribute to innovative projects</p>
+                <div class="tab-titles">
+               <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+             <!--  <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
+               <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>JS</span><br>
+                            Adding functionality to web pages
+                            
+                        </li>
+                        <li><span>Git</span><br>Version Control</li>
+                       <!-- <li><span>UI?UX</span><br>Designing web/app interfaces</li>-->
+                        
+                    </ul>
+                </div>
+              <!--  <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>UI?UX</span><br>Designing web/app interfaces</li>
+                        <li><span>web dev</span><br>Designing web/app interfaces</li>
+                        <li><span>UI?UX</span><br>Designing web/app interfaces</li>
+                        
+                    </ul>
+                </div>-->
+                <div class="tab-contents"  id="education">
+                    <ul>
+                        <li><span>2022-2026</span><br>B.E CSE from JNNCE</li>
+                       
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <!-- services -->
+    <div id="services">
+ <div class="container">
+    <h1 class="sub-title"> My Services</h1>
+    <div class="services-list">
+        <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolor.</p>
+            <a href="#">learn more</a>
+
+        </div>
+        <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>UI/UX Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolor.</p>
+            <a href="#">learn more</a>
+
+        </div>
+        <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolor.</p>
+            <a href="#">learn more</a>
+
+        </div>
+    </div>
+ </div>
+
+    </div> 
+<!-- portfolio -->
+ <!-- <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+
+        </div>
+    </div>
+ </div> -->
+ <!-- contact -->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+<h1 class="sub-title">Contact Me</h1>
+<p><i class="fa-regular fa-paper-plane"></i> samanvithachanna@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i>9980720724</p>
+<div class="social-icons">
+    <a href="https://www.linkedin.com/in/samanvitha-c-29762524a/"><i class="fa-brands fa-linkedin"></i></a>
+    <a href=""><i class="fa-brands fa-instagram"></i></a>
+    <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+    <!-- <a href=""></a> -->
+</div>
+<a href="" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Samanvitha.  </p>
+       
+    </div>
+  </div>
+   <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+         for(tablink of tablinks){
+         tablink.classList.remove("active-link");
+         }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+           event.currentTarget.classList.add("active-link");
+           document.getElementById(tabname).classList.add("active-tab");
+    }
+   </script>
+</body>
+</html>
